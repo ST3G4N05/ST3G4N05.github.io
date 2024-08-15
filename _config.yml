@@ -14,9 +14,9 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: jekyll-theme-potato-hacker
-author: "<your_name>"
-email: "<your@mail>"
-description: A simple Jekyll theme based on potatoes and hackers
+author: "Munchk1n"
+email: "<email>"
+description: Un vault de conocimeinto de ciberseguridad
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
@@ -24,7 +24,7 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 # Custom settings
 # ------------------------------------------------------------------------------
 # Useful links
-github_username: "<github_username>"
+github_username: "ST3G4N05"
 facebook_username: "<facebook_username>"
 twitter_username: "<twitter_username>"
 linkedin_id: "<linkedin_id>"
