@@ -13,10 +13,10 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: jekyll-theme-potato-hacker
+title: The Vault
 author: "Munchk1n"
 email: "<email>"
-description: Un vault de conocimeinto de ciberseguridad
+description: A vault of knowledge about def/offensive info
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
@@ -40,15 +40,16 @@ theme_switch: on         # Show color switch (on | off)
 blog: on                 # Show blog tag and post list (on | off)
 avatar: on               # Show avatar (on | off)
 avatar_image: "assets/img/avatar.jpg"
-avatar_description: "My name is Popotato and I'm a HACKER."
+avatar_description: "Let's play Munchkin"
 highlighter_theme: gruvbox  # Theme of the syntax_highlighter [base16 |
                             # colorful | github | gruvbox | molokai |
                             # monokai | pastie | thankful_eyes | tulip ]
 toolbar_priority:        # Order of the items in the toolbar (except for blog and home)
-  - dropdown3  #menu para Howto
+  - cheetsheets  
   - dropdown2
+  - Theory
+  - How to...  #menu para Howto
   - About
-  - dropdown1
   
 
 # Collections
