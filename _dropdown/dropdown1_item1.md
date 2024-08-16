@@ -1,7 +1,7 @@
 ---
 layout: page
 title: item1
-description: Test page
+description: 
 dropdown: BlueTeam
 priority: 1
 ---
