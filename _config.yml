@@ -64,7 +64,7 @@ collections:
 dropdown:
   - dropdown: "Blue Team"
     title: "SOC Analyst Basics"
-    url: "/blue-team/soc-analyst-basics"
+    url: "#"    #/blue-team/soc-analyst-basic
     priority: 1
     subitems:
       - title: "Log Analysis"
