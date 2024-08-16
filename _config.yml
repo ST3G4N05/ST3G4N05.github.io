@@ -53,21 +53,36 @@ toolbar_priority:        # Order of the items in the toolbar (except for blog an
   
 
 # Collections
+
 collections:
   dropdown:
     output: true
   items:
     output: true
+  ##Added new items for drop menu
+    collections: 
+      - name: "Blue Team"
+        dropdown_items:
+            - name: "SOC Analyst Basics"
+              url: "/blue-team/soc-analyst-basics"
+              subitems:
+                - name: "Log Analysis"
+                  url: "/blue-team/soc-analyst-basics/log-analysis"
+                - name: "Incident Response"
+                  url: "/blue-team/soc-analyst-basics/incident-response"
+            - name: "Threat Detection"
+              url: "/blue-team/threat-detection"
+  
 # ------------------------------------------------------------------------------
 
 
 # Build settings
 excerpt_separator: "<!--more-->"
 markdown: kramdown
-highlighter: rouge
+highlighter: green    #rouge
 kramdown:
   input: GFM
-  syntax_highlighter: rouge
+  syntax_highlighter: green    #rouge
 exclude:
   - Gemfile
   - Gemfile.lock
