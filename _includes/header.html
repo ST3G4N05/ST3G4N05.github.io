@@ -27,7 +27,17 @@
                     <span class="caret"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-menu-{{ page.title }}">
+                    <!-- INICIO: Lógica para manejar submenús dentro de dropdowns -->
+                    {% if page.subitems %}
+                      {% for subitem in page.subitems %}
+                        <li class="dropdown-submenu">
+                          <a href="{% if subitem.redirect_to %}{{subitem.redirect_to}}{% else %}{{ subitem.url | prepend: site.baseurl }}{% endif %}">{{ subitem.title }}</a>
+                        </li>
+                      {% endfor %}
+                    {% else %}                    
                     <li priority="{{ page.priority }}"><a href="{% if page.redirect_to %}{{page.redirect_to}}{% else %}{{ page.url | prepend: site.baseurl }}{% endif %}">{{ page.title }}</a></li>
+                    {% endif %}
+                    <!-- FIN: Lógica para manejar submenús dentro de dropdowns -->
                   </ul>
                 </li>
               {% endfor %}
