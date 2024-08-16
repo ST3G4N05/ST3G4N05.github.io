@@ -63,14 +63,14 @@ collections:
 # Configuración de los dropdowns y items
 dropdown:
   - dropdown: "Blue Team"
-    title: "SOC Analyst Basics"
+    title: "SOC Analyst"
     url: "#"    #/blue-team/soc-analyst-basic
     priority: 1
     subitems:
       - title: "Log Analysis"
-        url: "/blue-team/soc-analyst-basics/log-analysis"
+        url: "/blue-team/soc-analyst/log-analysis"
       - title: "Incident Response"
-        url: "/blue-team/soc-analyst-basics/incident-response"
+        url: "/blue-team/soc-analyst/incident-response"
   - dropdown: "Blue Team"
     title: "Threat Detection"
     url: "/blue-team/threat-detection"
