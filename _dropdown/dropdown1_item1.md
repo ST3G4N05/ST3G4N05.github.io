@@ -1,10 +1,15 @@
 ---
 layout: page
-title: item1
-description: 
-dropdown: BlueTeam
+title: "Log Analysis"
+description: "Guía sobre análisis de logs para SOC Analysts"
+parent: SOC Analyst  # Indica que es parte del menú "SOC Analyst" AÑADIDO
+dropdown: Blue Team
 priority: 1
 ---
 
-# Usos de SIEM
--....(En construcción)
+# Log Analysis
+
+logs...
+
+
+....(En construcción)
