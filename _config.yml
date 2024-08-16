@@ -45,8 +45,8 @@ highlighter_theme: gruvbox  # Theme of the syntax_highlighter [base16 |
                             # colorful | github | gruvbox | molokai |
                             # monokai | pastie | thankful_eyes | tulip ]
 toolbar_priority:        # Order of the items in the toolbar (except for blog and home)
-  - BlueTeam
-  - RedTeam
+  - Blue Team
+  - Red Team
   - Recursos
   - How to...  #menu para Howto
   
@@ -70,7 +70,7 @@ dropdown:
       - title: "Log Analysis"
         url: "/dropdown/soc-analyst/log-analysis.md"
       - title: "Incident Response"
-        url: "/dropdown/soc-analyst/incident-response"
+        url: "/dropdown/soc-analyst/incident-response.md"
   - dropdown: "Blue Team"
     title: "Threat Detection"
     url: "/blue-team/threat-detection"
