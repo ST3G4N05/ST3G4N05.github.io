@@ -20,7 +20,7 @@
                 <li><a href="{{ '/blog' | prepend: site.baseurl }}">Blog</a></li>
               {% endif %}
 
-                 {% for page in site.dropdown %}
+              {% for page in site.dropdown %}
                 <li class="dropdown dropdown-{{ page.dropdown }}">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown"
                     role="button" aria-haspopup="true" aria-expanded="false">{{ page.dropdown }}
@@ -28,19 +28,19 @@
                   </a>
                   <ul class="dropdown-menu dropdown-menu-{{ page.title }}">
                     <!-- INICIO: Lógica para manejar submenús dentro de dropdowns -->
-                      {% if page.subitems %}
+                    {% if page.subitems %}
                       {% for subitem in page.subitems %}
                         <li class="dropdown-submenu">
                           <a href="{% if subitem.redirect_to %}{{subitem.redirect_to}}{% else %}{{ subitem.url | prepend: site.baseurl }}{% endif %}">{{ subitem.title }}</a>
                         </li>
                       {% endfor %}
-                    {% else %}                    
-                    <li priority="{{ page.priority }}"><a href="{% if page.redirect_to %}{{page.redirect_to}}{% else %}{{ page.url | prepend: site.baseurl }}{% endif %}">{{ page.title }}</a></li>
+                    {% else %}
+                      <li priority="{{ page.priority }}"><a href="{% if page.redirect_to %}{{page.redirect_to}}{% else %}{{ page.url | prepend: site.baseurl }}{% endif %}">{{ page.title }}</a></li>
                     {% endif %}
                     <!-- FIN: Lógica para manejar submenús dentro de dropdowns -->
-                   </ul>
+                  </ul>
                 </li>
-              {% endfor %} 
+              {% endfor %}
               {% for page in site.items %}
                 <li class="nav-item"><a href="{% if page.redirect_to %}{{page.redirect_to}}{% else %}{{ page.url | prepend: site.baseurl }}{% endif %}">{{ page.title }}</a></li>
               {% endfor %}
@@ -49,32 +49,30 @@
                 // clean repeated dropdowns and add <li> to their positions
                 let done = [];
                 let elements = [];
-                $(".dropdown")
-                  //
-                  .each((index0 , value0) => {
-                    let dropdownClass = "."+$(value0)[0].classList[1];
-                    if (done.indexOf(dropdownClass) !== -1) return
-                    done.push(dropdownClass)
-                    let dropdownMain = $(dropdownClass)[0]
-                    let itemsList = $(dropdownClass+">ul>li").sort((a, b) => parseInt(b.getAttribute("priority") || -9999999) - parseInt(a.getAttribute("priority") || -9999999))
-                    $(dropdownClass+">ul>li").remove();
-                    $(dropdownClass+">ul").append(itemsList)
-                    $(dropdownClass).remove();
-                    elements.push(dropdownMain)
+                $(".dropdown").each((index0, value0) => {
+                  let dropdownClass = "." + $(value0)[0].classList[1];
+                  if (done.indexOf(dropdownClass) !== -1) return;
+                  done.push(dropdownClass);
+                  let dropdownMain = $(dropdownClass)[0];
+                  let itemsList = $(dropdownClass + ">ul>li").sort((a, b) => parseInt(b.getAttribute("priority") || -9999999) - parseInt(a.getAttribute("priority") || -9999999));
+                  $(dropdownClass + ">ul>li").remove();
+                  $(dropdownClass + ">ul").append(itemsList);
+                  $(dropdownClass).remove();
+                  elements.push(dropdownMain);
                 });
                 let priority = [{% for item in site.toolbar_priority %} "{{item}}", {% endfor %}];
-                elements = elements.concat(...$(".nav-item").remove())
+                elements = elements.concat(...$(".nav-item").remove());
                 priority.map(text => {
                   elements = elements.filter(node => {
-                      let nodeText = node.querySelector("a").textContent.trim()
-                      if (text == nodeText) {
-                          $(".nav").append(node)
-                          return false;
-                      }
-                      return true;
-                  })
+                    let nodeText = node.querySelector("a").textContent.trim();
+                    if (text == nodeText) {
+                      $(".nav").append(node);
+                      return false;
+                    }
+                    return true;
+                  });
                 });
-                $(".nav").append(elements)
+                $(".nav").append(elements);
               </script>
             </ul>
           </div>
