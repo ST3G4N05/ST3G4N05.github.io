@@ -59,19 +59,22 @@ collections:
     output: true
   items:
     output: true
-  ##Added new items for drop menu
-    collections: 
-      - name: "Blue Team"
-        dropdown_items:
-            - name: "SOC Analyst Basics"
-              url: "/blue-team/soc-analyst-basics"
-              subitems:
-                - name: "Log Analysis"
-                  url: "/blue-team/soc-analyst-basics/log-analysis"
-                - name: "Incident Response"
-                  url: "/blue-team/soc-analyst-basics/incident-response"
-            - name: "Threat Detection"
-              url: "/blue-team/threat-detection"
+##Added new items for drop menu
+# Configuración de los dropdowns y items
+dropdown:
+  - dropdown: "Blue Team"
+    title: "SOC Analyst Basics"
+    url: "/blue-team/soc-analyst-basics"
+    priority: 1
+    subitems:
+      - title: "Log Analysis"
+        url: "/blue-team/soc-analyst-basics/log-analysis"
+      - title: "Incident Response"
+        url: "/blue-team/soc-analyst-basics/incident-response"
+  - dropdown: "Blue Team"
+    title: "Threat Detection"
+    url: "/blue-team/threat-detection"
+    priority: 2
   
 # ------------------------------------------------------------------------------
 
