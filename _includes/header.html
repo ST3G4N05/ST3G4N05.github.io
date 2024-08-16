@@ -20,7 +20,7 @@
                 <li><a href="{{ '/blog' | prepend: site.baseurl }}">Blog</a></li>
               {% endif %}
 
-                <!-- {% for page in site.dropdown %}
+                 {% for page in site.dropdown %}
                 <li class="dropdown dropdown-{{ page.dropdown }}">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown"
                     role="button" aria-haspopup="true" aria-expanded="false">{{ page.dropdown }}
@@ -28,7 +28,7 @@
                   </a>
                   <ul class="dropdown-menu dropdown-menu-{{ page.title }}">
                     <!-- INICIO: Lógica para manejar submenús dentro de dropdowns -->
-                     <!--{% if page.subitems %}
+                      {% if page.subitems %}
                       {% for subitem in page.subitems %}
                         <li class="dropdown-submenu">
                           <a href="{% if subitem.redirect_to %}{{subitem.redirect_to}}{% else %}{{ subitem.url | prepend: site.baseurl }}{% endif %}">{{ subitem.title }}</a>
@@ -38,34 +38,9 @@
                     <li priority="{{ page.priority }}"><a href="{% if page.redirect_to %}{{page.redirect_to}}{% else %}{{ page.url | prepend: site.baseurl }}{% endif %}">{{ page.title }}</a></li>
                     {% endif %}
                     <!-- FIN: Lógica para manejar submenús dentro de dropdowns -->
-                  <!-- </ul>
+                   </ul>
                 </li>
-              {% endfor %} -->
-              <!-- INICIO: Lógica para manejar submenús dentro de dropdowns -->
-              {% for page in site.dropdown %}
-                <li class="dropdown dropdown-{{ page.dropdown }}">
-                  <a href="{% if page.url == '#' %}javascript:void(0);{% else %}{{ page.url | prepend: site.baseurl }}{% endif %}"
-                     class="dropdown-toggle"
-                     data-toggle="dropdown"
-                     role="button"
-                     aria-haspopup="true"
-                     aria-expanded="false">{{ page.dropdown }}
-                     <span class="caret"></span>
-                  </a>
-                  <ul class="dropdown-menu dropdown-menu-{{ page.title }}">
-                    {% if page.subitems %}
-                      {% for subitem in page.subitems %}
-                        <li class="dropdown-submenu">
-                          <a href="{{ subitem.url | prepend: site.baseurl }}">{{ subitem.title }}</a>
-                        </li>
-                      {% endfor %}
-                    {% else %}
-                      <li priority="{{ page.priority }}"><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
-                    {% endif %}
-                  </ul>
-                </li>
-              {% endfor %}
-              <!-- FIN: Lógica para manejar submenús dentro de dropdowns -->
+              {% endfor %} 
               {% for page in site.items %}
                 <li class="nav-item"><a href="{% if page.redirect_to %}{{page.redirect_to}}{% else %}{{ page.url | prepend: site.baseurl }}{% endif %}">{{ page.title }}</a></li>
               {% endfor %}
