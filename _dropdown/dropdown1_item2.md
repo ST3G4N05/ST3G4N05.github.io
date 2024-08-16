@@ -1,8 +1,9 @@
 ---
 layout: page
-title: item2
+title: 
 description: Test page
-dropdown: dropdown1
+dropdown: Blue Team
+parent: SOC analyst
 priority: 2
 ---
 # Lorem ipsum
