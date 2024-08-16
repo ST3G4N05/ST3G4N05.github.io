@@ -68,9 +68,9 @@ dropdown:
     priority: 1
     subitems:
       - title: "Log Analysis"
-        url: "/blue-team/soc-analyst/log-analysis"
+        url: "/dropdown/soc-analyst/log-analysis"
       - title: "Incident Response"
-        url: "/blue-team/soc-analyst/incident-response"
+        url: "/dropdown/soc-analyst/incident-response"
   - dropdown: "Blue Team"
     title: "Threat Detection"
     url: "/blue-team/threat-detection"
