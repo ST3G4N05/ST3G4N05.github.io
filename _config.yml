@@ -61,20 +61,20 @@ collections:
     output: true
 ##Added new items for drop menu
 # Configuración de los dropdowns y items
-dropdown:
-  - dropdown: "Blue Team"
-    title: "SOC Analyst"
-    url: "#"    #/blue-team/soc-analyst
-    priority: 1
-    subitems:
-      - title: "Log Analysis"
-        url: "/dropdown/soc-analyst/log-analysis.md"
-      - title: "Incident Response"
-        url: "/dropdown/soc-analyst/incident-response.md"
-  - dropdown: "Blue Team"
-    title: "Threat Detection"
-    url: "/blue-team/threat-detection"
-    priority: 2
+#dropdown:
+#  - dropdown: "Blue Team"
+#    title: "SOC Analyst"
+#    url: "#"    #/blue-team/soc-analyst
+#    priority: 1
+#    subitems:
+#      - title: "Log Analysis"
+#        url: "/dropdown/soc-analyst/log-analysis.md"
+#      - title: "Incident Response"
+#        url: "/dropdown/soc-analyst/incident-response.md"
+#  - dropdown: "Blue Team"
+#    title: "Threat Detection"
+#    url: "/blue-team/threat-detection"
+#    priority: 2
   
 # ------------------------------------------------------------------------------
 
