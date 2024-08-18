@@ -197,6 +197,34 @@
   }
 }
 
+//ADED FOR SUBMENUS
+.dropdown-menu {
+  position: relative;
+
+  // Estilos para submenús dentro del menú desplegable
+  .dropdown-submenu {
+      display: none;  // Oculta los submenús por defecto
+      position: absolute;
+      left: 100%;  // Coloca el submenú a la derecha del menú principal
+      top: 0;      // Alinea el submenú en la parte superior del menú principal
+
+      &:hover {
+          display: block;  // Muestra el submenú cuando se pasa el cursor sobre él
+      }
+  }
+}
+
+// Muestra el menú desplegable cuando el usuario pasa el ratón sobre el elemento del menú principal
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+// Muestra el submenú cuando el usuario pasa el ratón sobre el elemento del submenú
+.dropdown-submenu:hover .dropdown-menu {
+    display: block;
+}
+//END ADDED FOR SUBMENUS
+
 
 // Component alignment
 //
