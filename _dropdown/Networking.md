@@ -1,10 +1,10 @@
 ---
 layout: page
-title: 
+title: "Networking"
 description: Descripción de fundamentos del networking
 dropdown: Blue Team
-parent: SOC Analyst
-priority: 2
+menu: Blue Team
+priority: 1
 ---
 # NETWORKING FUNDAMENTALS
 
