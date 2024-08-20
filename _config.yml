@@ -63,7 +63,7 @@ collections:
 # Configuración de los dropdowns y items
 dropdown:
   - title: "Blue Team"
-    dropdown: "blue-team"
+    dropdown: "Blue Team"
     subitems:
       - title: "SOC Analyst"
         subitems:
